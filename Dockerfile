@@ -85,4 +85,6 @@ RUN apt-get autoremove \
 # Download nltk packages as required for unstructured
 RUN python -c "from unstructured.nlp.tokenize import _download_nltk_packages_if_not_present; _download_nltk_packages_if_not_present()"
 
-CMD ["python", "app.py"]
+#CMD ["python", "app.py"]
+EXPOSE 8080
+ENTRYPOINT ["python", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
