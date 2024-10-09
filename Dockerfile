@@ -87,4 +87,4 @@ RUN python -c "from unstructured.nlp.tokenize import _download_nltk_packages_if_
 
 #CMD ["python", "app.py"]
 EXPOSE 8080
-ENTRYPOINT ["python", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
+ENTRYPOINT ["python", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
